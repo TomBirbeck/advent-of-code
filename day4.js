@@ -23,7 +23,7 @@ function ranges(arr){
     console.log(count)
   }
 
-  ranges(pairs)
+  // ranges(pairs)
 
   //part 1 580
 
@@ -31,15 +31,16 @@ function ranges(arr){
     let count = 0
     for (let i = 0; i < arr.length; i++){
         const split = arr[i].split(',')
-        const elfOne = split[0].split('-')
-        const elfTwo = split[1].split('-')
-        if (elfOne[0] <= elfTwo[1] && elfTwo[0] <= elfOne[1]){
-            console.log("1", elfOne, "2", elfTwo, "count", count)
-            count++
-         
+        const elfOne = split[0].split('-').map(Number)
+        const elfTwo = split[1].split('-').map(Number)
+        
+  if (elfOne[0] <= elfTwo[1] && elfTwo[0] <= elfOne[1]){
+            count++  
     }
     console.log(count)
   }
 }
 
-//   rangesTwo(pairs)
+  rangesTwo(pairs)
+
+  //part 2 895
