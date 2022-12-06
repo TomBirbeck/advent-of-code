@@ -21,8 +21,24 @@ function pattern(data) {
     }
   }
 
-  pattern(data)
+//   pattern(data)
 
   //part 1 1757
 
-  
+  function patternTwo(data) {
+    let fourteens = [];
+    for (let i = 0; i < data.length; i++) {
+      fourteens.push(data[i]);
+      if (fourteens.length > 14) {
+        fourteens.shift();
+      }
+      if (fourteens.length === 14 && checkUnique(fourteens)) {
+        console.log(i + 1);
+        break;
+      }
+    }
+  }
+
+  patternTwo(data)
+
+  //part 2 2950
